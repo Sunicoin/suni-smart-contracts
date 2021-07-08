@@ -4,7 +4,7 @@ const { ChainId } = require("@sushiswap/sdk")
 const SUSHI = {
   //[ChainId.MATIC]: '0x0b3F868E0BE5597D5DB7fEB59E1CADBb0fdDa50a',
   //[ChainId.RINKEBY]: '0x210177AAE9824141591BF30aE156Bfd906f18B71'
-  [ChainId.RINKEBY]: '0x32f402B43A03692faABF5Fc6535CD4c9D9F25e51'
+  [ChainId.RINKEBY]: '0xeB19aCa1bE9dc7e2E10814058C0cBB9Ef03ee305'
 }
 
 module.exports = async function ({ ethers, deployments, getNamedAccounts }) {
@@ -20,11 +20,11 @@ module.exports = async function ({ ethers, deployments, getNamedAccounts }) {
   console.log(ChainId);
 
   if (chainId === '31337') {
-    sushiAddress = (await deployments.get("SushiToken")).address
+    sushiAddress = (await deployments.get("SuniToken")).address
   } else if (chainId in SUSHI) {
     sushiAddress = SUSHI[chainId]
   } else {
-    throw Error("No SUSHI!")
+    throw Error("No SUNI!")
   }
 
   await deploy("MiniChefV2", {

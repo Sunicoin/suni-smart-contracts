@@ -9,7 +9,7 @@ import "@openzeppelin/contracts/math/SafeMath.sol";
 // SuwpBar is the coolest bar in town. You come in with some SUWP, and leave with more! The longer you stay, the more SUWP you get.
 //
 // This contract handles swapping to and from xSuwp, SuwpSwap's staking token.
-contract SuwpBar is ERC20("SuwpBar", "xSUWP"){
+contract SuniBar is ERC20("SuniBar", "xSUBA"){
     using SafeMath for uint256;
     IERC20 public SUWP;
 
