@@ -3,7 +3,7 @@ const { ChainId } = require("@sushiswap/sdk")
 
 const SUSHI = {
   //[ChainId.MATIC]: '0x0b3F868E0BE5597D5DB7fEB59E1CADBb0fdDa50a',
-  [ChainId.RINKEBY]: '0x70Aa4e48cf5558445a9A5593Ff8C9f29fA8761E6'
+  [ChainId.RINKEBY]: '0xa079a567bc9818270f6AB627d50799e600E64F7c'
 }
 
 module.exports = async function ({ ethers, deployments, getNamedAccounts }) {

@@ -24,7 +24,7 @@ library SuniswapLibrary {
                 hex'ff',
                 factory,
                 keccak256(abi.encodePacked(token0, token1)),
-                hex'd982ab08087bc3f015a5718b6f80527bcad3a8eaa21154841f243602e8ea7bb7' // init code hash
+                hex'5bf0cfe26abbf27778fa0197d1016e018ade07ed395b91c0139ef0f5c7873c67' // init code hash
             ))));
     }
 
