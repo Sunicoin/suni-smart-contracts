@@ -7,7 +7,7 @@ import "@openzeppelin/contracts/token/ERC20/SafeERC20.sol";
 import "@openzeppelin/contracts/utils/EnumerableSet.sol";
 import "@openzeppelin/contracts/math/SafeMath.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
-import "./SuniToken.sol";
+import "./SuniExchange.sol";
 
 interface IMigratorChef {
     // Perform LP token migration from legacy UniswapV2 to SuniSwap.
@@ -56,7 +56,7 @@ contract MasterChef is Ownable {
         uint256 accSuniPerShare; // Accumulated SUWPs per share, times 1e12. See below.
     }
     // The SUWP TOKEN!
-    SuniToken public suwp;
+    SuniExchange public suwp;
     // Dev address.
     address public devaddr;
     // Block number when bonus SUWP period ends.
@@ -84,7 +84,7 @@ contract MasterChef is Ownable {
     );
 
     constructor(
-        SuniToken _suwp,
+        SuniExchange _suwp,
         address _devaddr,
         uint256 _suwpPerBlock,
         uint256 _startBlock,

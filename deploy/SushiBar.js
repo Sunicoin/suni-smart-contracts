@@ -3,7 +3,7 @@ module.exports = async function ({ getNamedAccounts, deployments }) {
 
   const { deployer } = await getNamedAccounts()
 
-  const sushi = await deployments.get("SuniToken")
+  const sushi = await deployments.get("SuniExchange")
 
   await deploy("SuniBar", {
     from: deployer,
@@ -14,4 +14,4 @@ module.exports = async function ({ getNamedAccounts, deployments }) {
 }
 
 module.exports.tags = ["SuniBar"]
-module.exports.dependencies = ["SuniswapFactory", "SuniswapRouter02", "SuniToken"]
+module.exports.dependencies = ["SuniswapFactory", "SuniswapRouter02", "SuniExchange"]

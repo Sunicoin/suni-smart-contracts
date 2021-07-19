@@ -9,7 +9,7 @@ module.exports = async function ({ ethers: { getNamedSigner }, getNamedAccounts,
 
   const factory = await ethers.getContract("SuniswapFactory")
   const bar = await ethers.getContract("SuniBar")
-  const sushi = await ethers.getContract("SuniToken")
+  const sushi = await ethers.getContract("SuniExchange")
   
   let wethAddress;
   
@@ -36,4 +36,4 @@ module.exports = async function ({ ethers: { getNamedSigner }, getNamedAccounts,
 }
 
 module.exports.tags = ["SuniMaker"]
-module.exports.dependencies = ["SuniswapFactory", "SuniswapRouter02", "SuniBar", "SuniToken"]
+module.exports.dependencies = ["SuniswapFactory", "SuniswapRouter02", "SuniBar", "SuniExchange"]
