@@ -17,9 +17,9 @@ module.exports = async function ({ getNamedAccounts, deployments }) {
     throw Error("No WETH!");
   }
 
-  const factoryAddress = (await deployments.get("SuniswapFactory")).address;
+  const factoryAddress = (await deployments.get("UniswapV2Factory")).address;
 
-  await deploy("SuniswapRouter02", {
+  await deploy("UniswapV2Router02", {
     from: deployer,
     args: [factoryAddress, wethAddress],
     log: true,
@@ -27,5 +27,5 @@ module.exports = async function ({ getNamedAccounts, deployments }) {
   });
 };
 
-module.exports.tags = ["SuniswapRouter02", "AMM"];
-module.exports.dependencies = ["SuniswapFactory", "Mocks"];
+module.exports.tags = ["UniswapV2Router02", "AMM"];
+module.exports.dependencies = ["UniswapV2Factory", "Mocks"];

@@ -14,7 +14,7 @@ module.exports = async function ({
 
   const { deployer, dev } = await getNamedAccounts();
 
-  await deploy("SuniswapFactory", {
+  await deploy("UniswapV2Factory", {
     contract: {
       abi,
       bytecode,
@@ -26,4 +26,4 @@ module.exports = async function ({
   });
 };
 
-module.exports.tags = ["SuniswapFactory", "AMM"];
+module.exports.tags = ["UniswapV2Factory", "AMM"];

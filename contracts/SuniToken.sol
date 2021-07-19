@@ -7,7 +7,7 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 
 
 // SuniToken with Governance.
-contract SuniToken is ERC20("SUNI SUNI", "SSUNI"), Ownable {
+contract SuniToken is ERC20("Suni Swap", "SUWP"), Ownable {
     /// @notice Creates `_amount` token to `_to`. Must only be called by the owner (MasterChef).
     function mint(address _to, uint256 _amount) public onlyOwner {
         _mint(_to, _amount);
